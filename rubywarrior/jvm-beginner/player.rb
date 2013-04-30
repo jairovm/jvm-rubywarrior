@@ -16,10 +16,8 @@ class Player
 
     def go
       if ALLOW_DIR.include?(ability.to_s)
-        puts "================================ #{ability} - #{dir}"
         warrior.send("#{ability}!", dir.first)
       else
-        puts "================================ #{ability}"
         warrior.send("#{ability}!")
       end
 
