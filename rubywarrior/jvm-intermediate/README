@@ -1,21 +1,52 @@
-Level 1
+Level 9
 
-Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
+Never before have you seen a room so full of sludge. Start the fireworks!
 
-Tip: Use warrior.direction_of_stairs to determine which direction stairs are located. Pass this to warrior.walk! to walk in that direction.
+Tip: Be careful not to let the ticking captive get caught in the flames. Use warrior.distance_of to avoid the captives.
 
- ------
-|      |
-|@     |
-|      |
-|  >   |
- ------
+ ----
+|ssC>|
+|@sss|
+|ssC |
+ ----
 
   > = Stairs
   @ = jvm (20 HP)
+  C = Captive (1 HP)
+  s = Sludge (12 HP)
 
 
 Warrior Abilities:
+
+  warrior.distance_of
+    Pass a Space as an argument, and it will return an integer representing the distance to that space.
+
+  warrior.look
+    Returns an array of up to three Spaces in the given direction (forward by default).
+
+  warrior.detonate!
+    Detonate a bomb in a given direction (forward by default) which damages that space and surrounding 4 spaces (including yourself).
+
+  warrior.listen
+    Returns an array of all spaces which have units in them.
+
+  warrior.direction_of
+    Pass a Space as an argument, and the direction (:left, :right, :forward, :backward) to that space will be returned.
+
+  warrior.rescue!
+    Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
+
+  warrior.bind!
+    Binds a unit in given direction to keep him from moving (forward by default).
+
+  warrior.attack!
+    Attacks a unit in given direction (forward by default).
+
+  warrior.health
+    Returns an integer representing your health.
+
+  warrior.rest!
+    Gain 10% of max health back, but do nothing more.
 
   warrior.walk!
     Move in the given direction (forward by default).
